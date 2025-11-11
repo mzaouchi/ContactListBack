@@ -15,6 +15,8 @@ exports.addContact= async(req,res)=>{
 
         const newContact = new Contact(req.body)
 
+        console.log(newContact)
+
         await newContact.save()
 
         res.status(200).send({msg : "Contact added", newContact})
